@@ -68,7 +68,7 @@ const Header = () => {
               {t("header.Contacts")}
             </NavLink>
             <NavLink to="/wishlist" className="relative">
-              <FcLike className="text-xl" />
+              <FcLike className="text-2xl" />
               <span className="absolute px-1 text-xs text-white bg-black rounded-full -right-2 -top-1">
                 {card.length}
               </span>
@@ -130,7 +130,7 @@ const Header = () => {
               <NavLink to="/wishlist" className="relative" onClick={closeMenu}>
                 <FcLike className="text-xl" />
                 <span className="absolute px-1 text-xs text-white bg-black rounded-full -right-2 -top-1">
-                  0
+                {card.length}
                 </span>
               </NavLink>
             </nav>

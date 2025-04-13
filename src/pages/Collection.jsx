@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { CiSearch } from "react-icons/ci";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,7 +13,7 @@ const Collection = () => {
     { id: 4, name: t("colect.Autumn") },
     { id: 3, name: t("colect.Summer") },
   ];
-  const [selected, setSelected] = useState(t("colect.All"));
+  const [selectedId, setSelectedId] = useState(1); 
   const [searchQuery, setSearchQuery] = useState("");
   const products = [
     {
@@ -197,26 +197,39 @@ const Collection = () => {
       category: t("category.s"),
     },
   ];
+
+
+
+  const handleCategoryClick = (id) => {
+    setSelectedId(id);
+  };
+
+  useEffect(() => {
+   
+  }, [t]);
+
   const filteredProducts = () => {
-    if (selected === t("colect.All")) {
+    if (selectedId === 1) {
       return products;
-    } else if (selected === t("colect.Winter")) {
+    } else if (selectedId === 2) {
       return products.filter((product) => product.id >= 1 && product.id <= 10);
-    } else if (selected === t("colect.Summer")) {
+    } else if (selectedId === 3) { 
       return products.filter((product) => product.id >= 21 && product.id <= 30);
-    } else if (selected === t("colect.Autumn")) {
+    } else if (selectedId === 4) { 
       return products.filter((product) => product.id >= 11 && product.id <= 20);
     }
     return [];
   };
+
   const searchFilter = () => {
     return products.filter((product) =>
       product.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
   };
+
   const card = useSelector((state) => state.card);
   const dispatch = useDispatch();
-  
+
   return (
     <div className="flex flex-col md:flex-row md:pt-28 m-auto max-w-[85rem] px-5 pt-16 ">
       <div className=" md:w-[35%] lg:w-[30%]">
@@ -232,21 +245,21 @@ const Collection = () => {
             <CiSearch />
           </button>
         </label>
-        <div className="hidden mt-5 ">
-          <ul className="flex">
-            {categories.map((item) => (
-              <li
-                key={item.id}
-                className={`mt-2 text-white text-xs ${
-                  item.name == selected ? "bg-red-500 " : "bg-black"
-                } `}
-                onClick={() => setSelected(item.name)}
-              >
-                {item.name}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <div className="mt-5 md:hidden">
+  <ul className="flex overflow-x-auto">
+    {categories.map((item) => (
+      <li
+        key={item.id}
+        className={`mr-2 text-white text-xs rounded px-4 py-1 whitespace-nowrap flex-shrink-0 ${ // Changed px-8 to px-4 and added whitespace-nowrap and flex-shrink-0
+          item.id == selectedId ? "bg-red-500 " : "bg-black"
+        } cursor-pointer`}
+        onClick={() => handleCategoryClick(item.id)}
+      >
+        {item.name}
+      </li>
+    ))}
+  </ul>
+</div>
         <div className="flex-col hidden mt-10 md:flex">
           <h1 className="text-3xl font-bold">{t("colect.Collection")}</h1>
           <ul className="mt-4">
@@ -254,11 +267,11 @@ const Collection = () => {
               <div
                 key={c.id}
                 className={`mt-2 text-lg font-semibold cursor-pointer ${
-                  c.name == selected 
+                  c.id == selectedId
                     ? "text-[#9B7D52]"
                     : "hover:text-[#9B7D52]"
                 } `}
-                onClick={() => setSelected(c.name)}
+                onClick={() => handleCategoryClick(c.id)}
               >
                 {c.name}
               </div>
@@ -285,7 +298,11 @@ const Collection = () => {
                     />
                   </Link>
                   <div
-                    onClick={() => card.some((cardItem) => cardItem.id === item.id) ? dispatch(removeCard(item.id)) : dispatch(addCard(item))}
+                    onClick={() =>
+                      card.some((cardItem) => cardItem.id === item.id)
+                        ? dispatch(removeCard(item.id))
+                        : dispatch(addCard(item))
+                    }
                     className="absolute z-10 p-1 text-white transition-transform duration-300 bg-gray-300 rounded-full cursor-pointer top-1 right-1 group-hover:scale-110"
                   >
                     {card.some((cardItem) => cardItem.id === item.id) ? (
@@ -338,7 +355,11 @@ const Collection = () => {
                     />
                   </Link>
                   <div
-                    onClick={() => card.some((cardItem) => cardItem.id === item.id) ? dispatch(removeCard(item.id)) : dispatch(addCard(item))}
+                    onClick={() =>
+                      card.some((cardItem) => cardItem.id === item.id)
+                        ? dispatch(removeCard(item.id))
+                        : dispatch(addCard(item))
+                    }
                     className="absolute z-10 p-1 text-white transition-transform duration-300 bg-gray-300 rounded-full cursor-pointer top-1 right-1 group-hover:scale-110"
                   >
                     {card.some((cardItem) => cardItem.id === item.id) ? (
@@ -374,7 +395,7 @@ const Collection = () => {
               </div>
             ))
           ) : (
-            <img src="Images/error.webp" />
+            <img src="Images/error.webp" alt="No results found" />
           )}
         </div>
       )}
