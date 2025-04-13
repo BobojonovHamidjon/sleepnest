@@ -11,3 +11,58 @@ body{
     scroll-behavior: smooth;
     font-family:"Montserrat", sans-serif ;
 }
+.telegram {
+    position: fixed;
+    bottom: 20px; /* Pastdan qanchalik uzoqda bo'lishi */
+    right: 20px;  /* O'ngdan qanchalik uzoqda bo'lishi */
+    z-index: 1000; /* Boshqa elementlar ustida turishi uchun */
+  }
+  
+  .telegram__icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 60px;  /* Ikonka konteynerining kengligi */
+    height: 60px; /* Ikonka konteynerining balandligi */
+    border-radius: 50%;
+    background-color: #9B7D52; /* Telegram rangiga yaqin */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .telegram__icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .telegram__ring {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #9B7D52;
+    border-radius: 50%;
+    animation: telegram-ring 1.5s infinite;
+    opacity: 0;
+  }
+  
+  @keyframes telegram-ring {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+    80% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+  .telegram__icon-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }

@@ -6,9 +6,8 @@ import Collection from "../pages/Collection";
 import Contact from "../pages/Contact";
 import Wishlist from "../pages/Wishlist";
 import Product from "../pages/Product";
-import Perfect from "../pages/perfect/Perfect";
-import Perfect3 from "../pages/perfect/Perfect3";
-import Perfect2 from "../pages/perfect/Perfect2";
+import News from "../components/News";
+
 
 export const router = createBrowserRouter([
   {
@@ -36,11 +35,13 @@ export const router = createBrowserRouter([
         element: <Wishlist />,
       },
       {
-        path: ":id",
+        path: ":id", // O'zgartirildi: "product" prefiksi qo'shildi
         element: <Product />,
+      },
+      {
+        path: ":id", // Yangi marshrut qo'shildi
+        element: <News />, // Ehtimol, bu ham Product komponentini ko'rsatar
       }
-     
-
     ],
   },
 ]);

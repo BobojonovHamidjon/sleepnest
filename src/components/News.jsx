@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom'; // Link komponentini import qilish
 
 const News = () => {
   const { t, i18n } = useTranslation();
@@ -11,7 +12,8 @@ const News = () => {
       content: t("news.When"),
       date: "10/05/2024",
       by: t("news.by"),
-      image:"Images/news1.png"
+      image: "Images/news1.png",
+      link: "/perfect/1" // Har bir yangilik uchun o'ziga xos link
     },
     {
       id: 2,
@@ -19,7 +21,8 @@ const News = () => {
       content: t("news.Interesting"),
       date: "10/05/2024",
       by: t("news.by"),
-      image:"Images/news2.png"
+      image: "Images/news2.png",
+      link: "/perfect/2" // Har bir yangilik uchun o'ziga xos link
     },
     {
       id: 3,
@@ -27,7 +30,8 @@ const News = () => {
       content: t("news.What"),
       date: "10/05/2024",
       by: t("news.by"),
-      image:"Images/news3.png"
+      image: "Images/news3.png",
+      link: "/perfect/3" // Har bir yangilik uchun o'ziga xos link
     },
   ];
 
@@ -39,15 +43,17 @@ const News = () => {
       </p>
       <div className="flex flex-col justify-between mt-5 md:flex-row md:gap-5 lg:gap-10">
         {news.map(item => (
-            <div key={item.id}>
-                <img src={item.image} alt="news" className="w-full rounded-2xl"/>
-                <div className="flex items-center gap-2 mt-1 mb-3">
-                    <h1 className="font-semibold">{item.date}</h1>
-                    <p className="text-xs text-[#616060] ">{item.by}</p>
-                </div>
-                <h1 className="text-lg font-bold md:text-base md:max-w-[450px] mb-2">{item.title}</h1>
-                <p className="text-[#5b5a5a] lg:max-w-[450px] text-base md:text-sm mb-5">{item.content}</p>
+          <div key={item.id}>
+            <Link to={item.link}> {/* Link komponenti bilan o'rash */}
+              <img src={item.image} alt="news" className="w-full rounded-2xl cursor-pointer"/>
+            </Link>
+            <div className="flex items-center gap-2 mt-1 mb-3">
+              <h1 className="font-semibold">{item.date}</h1>
+              <p className="text-xs text-[#616060] ">{item.by}</p>
             </div>
+            <h1 className="text-lg font-bold md:text-base md:max-w-[450px] mb-2">{item.title}</h1>
+            <p className="text-[#5b5a5a] lg:max-w-[450px] text-base md:text-sm mb-5">{item.content}</p>
+          </div>
         ))}
       </div>
     </div>

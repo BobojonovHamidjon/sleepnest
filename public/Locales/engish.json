@@ -145,7 +145,8 @@
     "Name":"Name *",
     "Email":"Email *",
     "Your review":"Your review *",
-    "Submit":"Submit a review"
+    "Submit":"Submit a review",
+    "Reviews": "Similar products"
   },
   "category":{
     "w":"Winter Collection",
