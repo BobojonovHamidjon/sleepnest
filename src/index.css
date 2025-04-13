@@ -1,0 +1,13 @@
+
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav a.active{
+    color: #9B7D52 ;
+    font-weight: 600;
+}
+body{
+    scroll-behavior: smooth;
+    font-family:"Montserrat", sans-serif ;
+}

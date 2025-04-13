@@ -1,0 +1,156 @@
+{
+  "header": {
+    "Home": "Bosh sahifa",
+    "About": "Biz haqimizda",
+    "Collection": "To'plam",
+    "Contacts": "Kontaktlar"
+  },
+  "hero": {
+    "Environmental": "Ekologik",
+    "Clean": "Toza Uyqu",
+    "Products": "Mahsulotlari"
+  },
+  "service": {
+    "Free": "Yetkazib berish bepul",
+    "Free shipping": "Barcha buyurtmalar uchun bepul yetkazib berish",
+    "Return": "Qaytish kafolati",
+    "30": "30 kunlik pulni qaytarish",
+    "24/7": "24/7 onlayn qo'llab-quvvatlash",
+    "24/7 technical": "24/7 texnik yordam",
+    "Secure": "Xavfsiz to'lov",
+    "All": "Barcha to'lov usullari qabul qilinadi"
+  },
+  "quality": {
+    "Material": "Material sifati",
+    "Ecologically": "Ekologik Toza Uyqu Mahsulotlari",
+    "has": "ko'p yillar davomida butun dunyoda foydalanish uchun paxta matolarini ishlab chiqaradigan kompaniya bo'lib kelgan",
+    "Collection": "To'plam"
+  },
+  "collection": {
+    "Winter": "Qish kolleksiyasi",
+    "Ecologically": "Ekologik Toza Uyqu Mahsulotlari",
+    "1": "Kvadratchalar",
+    "2": "Ikat",
+    "3": "Davralar",
+    "4": "Geometriya ko'k",
+    "5": "Tropik barglar",
+    "6": "Bambi",
+    "7": "Vizantiya",
+    "8": "Kechki bog'",
+    "9": "Pat Markiz",
+    "10": "Lavanda atirgullari"
+  },
+  "autumn": {
+    "Autumn": "Kuz kolleksiyasi",
+    "Ecologically": "Ekologik Toza Uyqu Mahsulotlari",
+    "1": "Safari",
+    "2": "Ko'p rangli ametist",
+    "3": "Shivali bezak",
+    "4": "Zumrad (AB)",
+    "5": "Malaxit qutisi",
+    "6": "Bahorning hidlari",
+    "7": "Kuzgi barglar tushishi (AB)",
+    "8": "Moviy shabada",
+    "9": "Moviy suv",
+    "10": "Plaid"
+  },
+  "summer": {
+    "Summer": "Yozgi kolleksiya",
+    "Ecologically": "Ekologik Toza Uyqu Mahsulotlari",
+    "1": "Vintage uslubi",
+    "2": "karahindiba",
+    "3": "Fransuz Riviera",
+    "4": "Qo'y Dolli",
+    "5": "Alp tog'lari o'simliklari",
+    "6": "Ilhomlantiruvchi",
+    "7": "Yashil lotus",
+    "8": "Tog'li makkajo'xori",
+    "9": "Sakura filiali",
+    "10": "Zaytun novdasi"
+  },
+  "news": {
+    "News": "Yangiliklar",
+    "Ecologically": "Ekologik Toza Uyqu Mahsulotlari",
+    "by": "admin tomonidan",
+    "How": "Qanday qilib mukammal gadjetlarni tanlash mumkin",
+    "When": "Go'zal vodiyning bug' bilan to'lganda va meridian quyoshi tepalikka urilganda...",
+    "How2": "Zamonaviy texnologiyalardan qanday foydalanish kerak",
+    "Interesting": "Texnologiyalar hayotimizni qanday o'zgartirishi haqida qiziqarli hikoyalar...",
+    "Ways": "Kreativ g'oyalarni amalga oshirish yo'llari",
+    "What": "Ko'plab yangi kashfiyotlar yaratish jarayonida qanday qiyinchiliklarga duch kelinadi..."
+  },
+  "footer": {
+    "Ecological": "“Ekologik Toza Uyqu Mahsulotlat” koʻp yillardan buyon butun dunyoda foydalanish uchun paxta matolari ishlab chiqaradigan kompaniya hisoblanadi.",
+    "menu": "menyu",
+    "Bukhara": "Buxoro, st. Alpomish 80.",
+    "Email": "Email: sleepnest@gamil.com",
+    "Telegram": "Telegram: sleepnest",
+    "Subscribe": "Elektron pochtamizga obuna bo'ling",
+    "Subscribee": "Obuna Bo'ling",
+    "Select": "Kamida bitta roʻyxatni tanlang.",
+    "2024": "© 2024 MChJ Ekologik Toza Uyqu Mahsulotlari Barcha huquqlar himoyalangan.",
+    "send_success":"Muvaffaqiyatli obuna bo'ldi",
+    "send_error":"Obuna bo'lmadi",
+    "network_error":"Tarmoqda xatolik"
+  },
+  "colect":{
+    "Searching":"Qidiruv ....",
+    "Collection":"To'plam",
+    "All":"Barcha kategoriyalar",
+    "Winter":"Qish kolleksiyasi",
+    "Autumn":"Kuz kolleksiyasi",
+    "Summer":"Yozgi kolleksiya"
+  },
+  "about":{
+    "Ecologically":"Ekologik Toza Uyqu Mahsulotlari",
+    "Our":"Matolarimiz va ekologik sumkalar ishlab chiqaruvchi korxonamiz uzoq yillardan beri paxta matolarini global bozorda yetkazib berib kelmoqda.",
+    "Our company":"Korxonamiz o‘z faoliyatini 17 yil avval boshlagan va shu vaqt ichida mijozlarimiz ishonchini qozonib kelmoqda.",
+    "The":"Kompaniyamizning bosh maqsadi — sifatli, bardoshli va ekologik xavfsiz mahsulotlarni yaratishdir.",
+    "Manufacturing":"Ishlab chiqarish jarayonlari butunlay ekologik standartlarga mos bo‘lib, atrof-muhitga zarar yetkazmaslikka qaratilgan.",
+    "Using":"Zamonaviy texnologiyalardan foydalanib, turli xil paxta mahsulotlarini yuqori darajada ishlab chiqarish imkoniyatiga egamiz.",
+    "Also":"Shuningdek, biz DongJu to‘quv uskunalarining O‘zbekistondagi rasmiy vakili sifatida faoliyat yuritamiz.",
+    "Every":"Har yili fabrikamizda 80 dan ortiq mahsulot turlari ishlab chiqariladi, buning natijasida kompaniya yuqori sifat va barqaror ishlab chiqarishni ta’minlaydi.",
+    "More":"Korxonamizda zamonaviy texnologiyalar asosida 50 dan ortiq to‘quv dastgohlari faoliyat ko‘rsatmoqda.",
+    "In":"Bizning ishlab chiqarish jarayonlarimizda faqat sifatli va ekologik xavfsiz mahsulotlar ishlab chiqarishni ta’minlaymiz.",
+    "According":"Mijozlarimiz talablariga javoban, ekologik xavfsiz va zamonaviy dizaynli sumkalar ishlab chiqarish yo‘lga qo‘yilgan.",
+    "Our2":"Kompaniyamiz har doim mijozlariga sifatli mahsulot va yuqori darajadagi xizmat ko‘rsatishdan mamnun."
+  },
+  "contact":{
+    "Connection":"Aloqa",
+    "Your":"Sizning electron pochtangiz",
+    "Your phone":"Telefon raqamingiz",
+    "Please":"Sizning xabaringiz bo'lsa yozing",
+    "Send":"Yuborish",
+    "Bukhara":"Bukhara, st. Alpomish 80"
+  },
+  "wish":{
+    "Circles":"Davralar",
+    "Material":"Material:",
+    "100%":"100% paxta flanel",
+    "Pillowcase":"Yostiq kiyimi:",
+    "50x70":"50x70 sm (2 dona)",
+    "Bedding":"Choyshab:",
+    "260×280":"260×280 sm (1 dona)",
+    "Bed":"Ko'rpa-to'shak:",
+    "160x220":"160x220 sm (2 dona)",
+    "Size":"Hajmi:",
+    "Custom":"Maxsus o'lcham",
+    "Manufacturer":"Ishlab chiqaruvchi:" ,
+    "Environmental":"Ekologik Toza Uyqu Mahsulotlat",
+    "Category":"Kategoriya:",
+    "Product":"Mahsulot haqida sharhlar",
+    "No":"Hozircha sharhlar yo'q.",
+    "Leave":"O'z sharhingizni qoldiring",
+    "Your":"Sizning reytingingiz:",
+    "Name":"Ism *",
+    "Email":"Elektron pochta *",
+    "Your review":"Sizning sharhingiz *",
+    "Submit":"Sharhni yuborish"
+  },
+  "category":{
+    "w":"Qish kolleksiyasi",
+    "a":"Kuz kolleksiyasi",
+    "s":"Yoz kolleksiyasi"
+  },
+  "xabar":"Xabar muvaffaqiyatli yuborildi!"
+}
