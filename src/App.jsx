@@ -21,7 +21,7 @@ const App = () => {
     <div>
       <ScrollToTop />
       <Header />
-      <main className="content">
+      <main className="flex-grow">
         <Outlet />
       </main>
       <div className="telegram">
