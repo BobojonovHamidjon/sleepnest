@@ -1,0 +1,19 @@
+{
+    "rewrites": [
+        {"source": "/(.*)", "destination": "/"},
+        {
+            "source": ":id",
+            "destination": "/index.html"
+          },
+          {
+            "source": ":id", 
+            "destination": "/index.html"
+          },
+          {
+            "source": "/(?!_next|static|.*\\..*$).*",
+            "destination": "/index.html"
+          }
+    ]
+
+
+  }
