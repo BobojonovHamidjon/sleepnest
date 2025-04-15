@@ -1,13 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App"
+import App from "../App";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Collection from "../pages/Collection";
 import Contact from "../pages/Contact";
 import Wishlist from "../pages/Wishlist";
 import Product from "../pages/Product";
+ // Yangilikning to'liq sahifasi komponenti
 import News from "../components/News";
-
+import NewsDetail from "../pages/NewsDetal";
 
 export const router = createBrowserRouter([
   {
@@ -35,13 +36,17 @@ export const router = createBrowserRouter([
         element: <Wishlist />,
       },
       {
-        path: ":id", // O'zgartirildi: "product" prefiksi qo'shildi
+        path: ":id", // Mahsulot sahifasi uchun aniq prefiks
         element: <Product />,
       },
       {
-        path: ":id", // Yangi marshrut qo'shildi
-        element: <News />, // Ehtimol, bu ham Product komponentini ko'rsatar
-      }
+        path: "news", // Yangiliklar sahifasi uchun aniq prefiks
+        element: <News />,
+      },
+      {
+        path: "news/:id", // Yangilikning to'liq sahifasi uchun aniq marshrut
+        element: <NewsDetail />,
+      },
     ],
   },
 ]);

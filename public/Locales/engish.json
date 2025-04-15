@@ -68,17 +68,19 @@
     "9":"Sakura Branch",
     "10":"Olive Branch"
   },
-  "news":{
-    "News":"News",
-    "Ecologically":"Ecologically Clean Sleep Products",
-    "by":"by admin",
-    "How":"How to choose the perfect gadgets",
-    "When":"When the beautiful valley fills with steam and the meridian sun hits the hill...",
-    "How2":"How to use modern technology",
-    "Interesting":"Interesting stories about how technology changes our lives...",
-    "Ways":"Ways to implement creative ideas",
-    "What":"What difficulties are encountered in the process of making many new discoveries..."
-  },
+  
+    "news": {
+      "News": "News",
+      "Ecologically": "Ecologically Clean Sleep Products",
+      "by": "by admin",
+      "How": "How to choose the perfect gadgets",
+      "When": "When the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of my impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless forms of the insects and flies, then I feel the presence of the Almighty who formed us in his own image, and the breath of that universal love which sustains and carries us, as it floats around us in everlasting bliss. Then, my friend, when darkness overspreads my eyes, and heaven and earth dwell in my soul and absorb its power, as the form of a beloved mistress has often done, I sigh to myself with longing: \"Oh, could I but express these conceptions? Could I impress on paper all that is living so full and warm within me, that it might be a mirror of my soul, as my soul is a mirror of the infinite God!\"",
+      "How2": "How to use modern technologies",
+      "Interesting": "Interesting stories about how technologies change our lives. When the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of my impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless forms of the insects and flies, then I feel the presence of the Almighty who formed us in his own image, and the breath of that universal love which sustains and carries us, as it floats around us in everlasting bliss. Then, my friend, when darkness overspreads my eyes, and heaven and earth dwell in my soul and absorb its power, as the form of a beloved mistress has often done, I sigh to myself with longing: \"Oh, could I but express these conceptions? Could I impress on paper all that is living so full and warm within me, that it might be a mirror of my soul, as my soul is a mirror of the infinite God!\"",
+      "Ways": "Ways to implement creative ideas",
+      "What": "What difficulties are encountered in the process of creating many new inventions. When the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of my impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless forms of the insects and flies, then I feel the presence of the Almighty who formed us in his own image, and the breath of that universal love which sustains and carries us, as it floats around us in everlasting bliss. Then, my friend, when darkness overspreads my eyes, and heaven and earth dwell in my soul and absorb its power, as the form of a beloved mistress has often done, I sigh to myself with longing: \"Oh, could I but express these conceptions? Could I impress on paper all that is living so full and warm within me, that it might be a mirror of my soul, as my soul is a mirror of the infinite God! Hey, friend! But it is too much for my strength -- I sink under the weight of the splendor of these visions! A serene calm, like a sweet morning of spring, which I enjoy with all my heart, has possessed my entire soul. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.\""
+    },
+  
   "footer":{
     "Ecological":"Ecological Clean Sleep Products is a company that produces cotton fabrics for use all over the world for many years.",
     "menu":"menu",

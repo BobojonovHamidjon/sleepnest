@@ -234,116 +234,111 @@ const Product = () => {
 
           
             <div className="mt-12">
-                <div className="flex justify-between flex-wrap">
-                    <div className="w-full md:w-[40%]">
-                        <h1 className="text-4xl font-bold mt-10">{t("wish.Product")}</h1>
-                        {reviews.length === 0 ? (
-                            <p className="mt-4 text-base font-semibold text-gray-400">{t("wish.No")}</p>
-                        ) : (
-                            reviews.map((review, index) => (
-                                <div key={index} className="mb-6 p-4 border rounded-md">
-                                    <div className="flex items-center mb-2">
-                                        <strong className="mr-2">{review.name}</strong>
-                                        {[...Array(5)].map((star, i) => (
-                                            <FaStar
-                                                key={i}
-                                                color={i < review.rating ? "#ffc107" : "#e4e4e4"}
-                                                size={20}
-                                            />
-                                        ))}
-                                    </div>
-                                    <p>{review.text}</p>
-                                </div>
-                            ))
-                        )}
-                    </div>
-
-                    {/* Review Form Section (Right - 55%) */}
-                    <div className="w-full md:w-[55%]">
-                        <div className="mb-12">
-                            <h2 className="font-bold text-4xl mt-10 mb-4">{t("wish.Leave")}</h2>
-                            {/* Placeholder for existing reviews (if any) */}
-                        </div>
-                        <div className="mb-4">
-                            <label className="block text-gray-700 text-sm font-bold mb-2">{t("wish.Your")}</label>
-                            <div className="flex items-center">
-                                {[...Array(5)].map((star, i) => (
-                                    <FaStar
-                                        key={i}
-                                        color={i < (hover || rating) ? "#ffc107" : "#e4e4e4"}
-                                        size={30}
-                                        onClick={() => setRating(i + 1)}
-                                        onMouseOver={() => setHover(i + 1)}
-                                        onMouseLeave={() => setHover(rating)}
-                                        className="cursor-pointer"
-                                    />
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Review form */}
-                        <div>
-                            <h2 className="font-bold text-2xl mb-4"></h2>
-                            <form onSubmit={submitReview}>
-                                {/* Name */}
-                                <div className="mb-4">
-                                    <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
-                                    {t("wish.Name")} *
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                        className="shadow appearance-none border rounded-[15px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                        required
-                                    />
-                                </div>
-                                {/* Email */}
-                                <div className="mb-4">
-                                    <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-                                    {t("wish.Email")} *
-                                    </label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        className="shadow appearance-none border rounded-[15px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                        required
-                                    />
-                                </div>
-
-
-                                {/* Review Text */}
-                                <div className="mb-6">
-                                    <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
-                                    {t("wish.Your review")} *
-                                    </label>
-                                    <textarea
-                                        id="message"
-                                        value={message}
-                                        onChange={(e) => setMessage(e.target.value)}
-                                        rows="4"
-                                        className="shadow appearance-none border rounded-[20px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none"
-                                        placeholder= {t("wish.Your review")}
-                                        required
-                                    />
-                                </div>
-                                {/* Button */}
-                                <div className="flex items-center justify-start">
-                                    <button
-                                        type="submit"
-                                        className="bg-red-500 hover:bg-red-700 w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                    >
-                                        {t("wish.Submit")}
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+      <div className="flex justify-between flex-wrap">
+        {/* Existing Reviews Section (Left - 40%) */}
+        <div className="w-full md:w-[40%]">
+          <h1 className="text-4xl font-bold mt-10">{t("wish.Product")}</h1>
+          {reviews.length === 0 ? (
+            <p className="mt-4 text-base font-semibold text-gray-400">{t("wish.No")}</p>
+          ) : (
+            reviews.map((review, index) => (
+              <div key={index} className="mb-6 p-4 border rounded-md shadow-sm">
+                <div className="flex items-center mb-2">
+                  <strong className="mr-2">{review.name}</strong>
+                  <div className="flex items-center">
+                    {[...Array(5)].map((star, i) => (
+                      <FaStar
+                        key={i}
+                        color={i < review.rating ? "#ffc107" : "#e4e4e4"}
+                        size={20}
+                      />
+                    ))}
+                  </div>
                 </div>
+                <p className="text-gray-700">{review.text}</p>
+              </div>
+            ))
+          )}
+        </div>
+
+        {/* Review Form Section (Right - 55%) */}
+        <div className="w-full md:w-[55%]">
+          <div className="mb-12">
+            <h2 className="font-bold text-4xl mt-10 mb-4">{t("wish.Leave")}</h2>
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2">{t("wish.Your")}</label>
+            <div className="flex items-center">
+              {[...Array(5)].map((star, i) => (
+                <FaStar
+                  key={i}
+                  color={i < (hover || rating) ? "#ffc107" : "#e4e4e4"}
+                  size={30}
+                  onClick={() => setRating(i + 1)}
+                  onMouseOver={() => setHover(i + 1)}
+                  onMouseLeave={() => setHover(rating)}
+                  className="cursor-pointer"
+                />
+              ))}
             </div>
+          </div>
+
+          <div>
+            <h2 className="font-bold text-2xl mb-4"></h2>
+            <form onSubmit={submitReview}>
+              <div className="mb-4">
+                <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+                  {t("wish.Name")} *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="shadow appearance-none border rounded-[15px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+                  {t("wish.Email")} *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="shadow appearance-none border rounded-[15px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  required
+                />
+              </div>
+              <div className="mb-6">
+                <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
+                  {t("wish.Your review")} *
+                </label>
+                <textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  rows="4"
+                  className="shadow appearance-none border rounded-[20px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none"
+                 
+                  required
+                />
+              </div>
+              <div className="flex items-center justify-start">
+                <button
+                  type="submit"
+                  className="bg-red-500 hover:bg-red-700 w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                  {t("wish.Submit")}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
             {/* Similar Products Section */}
             <div className="flex flex-col  items-center mt-20">
