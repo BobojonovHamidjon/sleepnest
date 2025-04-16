@@ -69,14 +69,17 @@ const Contact = () => {
             onChange={(e) => setName(e.target.value)}
             className="bg-[#e4e4e4] outline-none rounded-3xl px-4 py-3 w-full mb-5 text-xs md:text-sm md:p-5"
           />
-          <input
-            type="text"
-            placeholder={t("contact.Your phone")}
-            required
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            className="bg-[#e4e4e4] outline-none rounded-3xl px-4 py-3 w-full mb-5 text-xs md:text-sm md:p-5"
-          />
+         <input
+  type="phone"
+  placeholder={t("contact.Your phone")}
+  required
+  value={phone}
+  onChange={(e) => {
+    const value = e.target.value.replace(/[^0-9]/g, ''); // Faqat raqamlarni qoldiramiz
+    setPhone(value);
+  }}
+  className="bg-[#e4e4e4] outline-none rounded-3xl px-4 py-3 w-full mb-5 text-xs md:text-sm md:p-5"
+/>
           <textarea
             placeholder={t("contact.Please")}
             value={message}
